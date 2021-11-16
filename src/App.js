@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header/Header'
+import { GlobalStyle } from './style/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
+import { theme } from './style/Theme'
+import AboutSlider from 'components/AboutSlider/AboutSlider'
+import Main from 'sections/Main'
+import Footer from 'components/Footer/Footer'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <Header/>
+    <AboutSlider />
+    <Main />
+    <Footer />
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
