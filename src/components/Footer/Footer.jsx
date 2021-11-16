@@ -1,12 +1,16 @@
 import React from "react";
-import { StyledFooter } from "./style";
+import { StyledFooter, StyledFooterText } from "./style";
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>© 1999 - 2021 Todos los derechos reservados</p>
-      <p>| BEBER CON MODERACIÓN |</p>
-      <p>Prohibida la venta a menores de 18 años.</p>
+      <StyledFooterText>
+        © 1999 - 2021 Todos los derechos reservados
+      </StyledFooterText>
+      <StyledFooterText>| BEBER CON MODERACIÓN |</StyledFooterText>
+      <StyledFooterText>
+        Prohibida la venta a menores de 18 años.
+      </StyledFooterText>
     </StyledFooter>
   );
 };

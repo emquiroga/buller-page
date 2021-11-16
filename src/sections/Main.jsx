@@ -1,3 +1,6 @@
+import ImageContainer from "components/ImageContainer/ImageContainer";
+import { StyledImage } from "components/ImageContainer/style";
+import { images } from "content";
 import React from "react";
 
 const Main = () => {
@@ -7,6 +10,7 @@ const Main = () => {
         BULLER reúne el esfuerzo y conocimiento de tres generaciones dedicadas a
         la elaboración artesanal de cerveza.
       </h1>
+      <ImageContainer />
       <p>
         Elaboramos cerveza bajo las más antiguas tradiciones pero con la
         tecnología y el gusto actual.
@@ -16,6 +20,9 @@ const Main = () => {
         y temperamento propio de cada variedad para lograr el sabor único que
         hoy es nuestro sello diferencial.
       </p>
+      {images.map((image, index) => (
+        <StyledImage src={image} key={index} alt="Buller Factory" />
+      ))}
     </main>
   );
 };

@@ -14,5 +14,13 @@ export const theme = {
         "large": "clamp(26px, 2vw, 36px)",
         "xlarge" : "clamp(32px, 2vw, 50px)",
         "xXL": "clamp(60px, 4vw, 85px)"
+    },
+    breakPoints: {
+        "small": "30em",
+        "medium": "40em",
+        "tablet": "48em",
+        "large": "64em",
+        "xlarge": "90em",
+        "xxl": "120em",
     }
 }

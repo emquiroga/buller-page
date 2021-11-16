@@ -4,13 +4,15 @@ import {
   Container,
   Content,
   ContentWrapper,
+  NavButton,
   SliderButton,
   SliderLink,
+  SliderNav,
 } from "./style";
-import { useSlider } from "hooks/useSlider";
+import { useNav } from "hooks/useNav";
 
 const AboutSlider = () => {
-  const { activeSlide, nextSlide, prevSlide } = useSlider();
+  const { activeSlide, nextSlide, prevSlide, goToSlide } = useNav();
   return (
     <>
       <Container>
@@ -31,6 +33,12 @@ const AboutSlider = () => {
           })}
           <SliderLink>Ver más...</SliderLink>
         </ContentWrapper>
+        <SliderNav>
+          <NavButton onClick={() => goToSlide(0)}>Bienvenida</NavButton>
+          <NavButton onClick={() => goToSlide(1)}>Sobre Nosotros</NavButton>
+          <NavButton onClick={() => goToSlide(2)}>Franquicias</NavButton>
+          <NavButton onClick={() => goToSlide(3)}>Experiencia Buller</NavButton>
+        </SliderNav>
       </Container>
     </>
   );
