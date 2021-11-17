@@ -2,16 +2,21 @@ export const theme = {
     fonts: {
         "primary": "'Noto Sans', sans-serif",
         "secondary": "'Noto Serif', serif",
+        "extra": "'Poppins', sans-serif"
     },
     colors: {
         "blackSt" : "rgba(0, 0, 0, 0.2)",
-        "body": "rgb(42%, 34%, 27%)",
+        "black": "#191919",
+        "grayish": "hsla(0, 0%, 100%, 0,4)",
+        "links": "#827264",
+        "hover": "#968777",
+        "body": "#6B5746",
         "footer": "#574332"
     },
     sizes: {
         "small": "clamp(14px, 2vw, 18px)",
-        "medium": "clamp(18px, 2vw, 24px)",
-        "large": "clamp(26px, 2vw, 36px)",
+        "medium": "clamp(18px, 2vw, 26px)",
+        "large": "clamp(28px, 2vw, 36px)",
         "xlarge" : "clamp(32px, 2vw, 50px)",
         "xXL": "clamp(60px, 4vw, 85px)"
     },

@@ -9,50 +9,38 @@ overflow: hidden;
 }
 `
 export const MainTitle = styled.h1`
-font-size: ${({ theme }) => theme.sizes.large};
+font-size: 24px;
 font-family: ${({ theme }) => theme.fonts.secondary};
-padding: 2rem 1rem 1rem 1rem;
+font-weight: 600;
+padding: 2rem 1rem;
 color: white;
 `
 export const MainText = styled.p`
-padding: 1.5rem 1rem;
-margin: auto;
+width: 93%;
+margin: .25rem auto;
+padding: 1.25rem 1rem;
 color: white;
+text-align: left;
+font-weight: 400;
+font-size: 16px;
+font-family: ${({ theme }) => theme.fonts.extra};
 `
 
 export const ImgContainer = styled.div`
-width: 100%;
+width: 85%;
 height: auto;
+margin: auto;
 padding: 1rem;
 max-height: 404px;
 display: flex;
 flex-flow: row;
-:hover {
-    animation: scroll 30s linear infinite;
-}
-@keyframes scroll {
-    0% {
-       transform: translateX(0); 
-    }
-    100% {
-        transform: translateX(calc(-210px * 3));
-    }
-}
+overflow-x: scroll;
+scroll-behavior: smooth;
+cursor: pointer;
 `
 export const MobileImage = styled.img`
 width: 100%;
 max-width: 400px;
 height: auto;
-margin-right: 1rem;
-border-radius: 5px;
-:hover {
-    transform: scale(1.035);
-    transition: all 350ms ease-in-out;
-}
-:nth-of-type(1){
-    width: 70%;
-}
-
-
-
+margin-right: 12px;
 `

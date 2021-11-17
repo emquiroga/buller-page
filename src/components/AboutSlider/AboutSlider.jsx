@@ -31,7 +31,7 @@ const AboutSlider = () => {
               </div>
             );
           })}
-          <SliderLink>Ver más...</SliderLink>
+          <SliderLink>Ver más</SliderLink>
         </ContentWrapper>
         <SliderNav>
           <NavButton onClick={() => goToSlide(0)}>Bienvenida</NavButton>

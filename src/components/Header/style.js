@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import HeaderMobile from "assets/latas.jpg"
-import HeaderBG from "assets/latas-desktop.jpg"
+import HeaderDesk from "assets/latas-desktop.jpg"
 
 export const StyledHeader = styled.header`
 width: 100%;
@@ -9,11 +9,11 @@ margin: 0;
 padding: 0;
 display: flex;
 flex-flow: column;
-background-image: url(${HeaderMobile});
+background: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%), url(${HeaderMobile});
 background-size: cover;
 @media (min-width: ${props => props.theme.breakPoints.large}) {
     flex-flow: row;
-    background-image: url(${HeaderBG});
+    background-image: url(${HeaderDesk});
 }
 `
 export const Logo = styled.svg`
@@ -33,7 +33,6 @@ padding: 2rem 0 1rem 0;
 display: flex;
 flex-flow: row;
 border-bottom: 1px solid grey;
-background-color: ${props => props.theme.colors.blackSt};
 `
 export const MediaWrapper = styled.div`
 margin-left: auto;
@@ -53,6 +52,7 @@ margin: auto 12px;
 padding: 0;
 width: 24px;
 height: 24px;
+cursor: pointer;
 `
 export const Navbar = styled.nav`
 @media (min-width: ${props => props.theme.breakPoints.large}) {
@@ -65,12 +65,17 @@ flex-flow: row;
 justify-content: space-around;
 align-content: space-around;
 border-bottom: 1px solid grey;
-background-color: ${props => props.theme.colors.blackSt};
 `
 export const NavLink = styled.a`
 display: block;
 color: white;
 margin: auto 2rem;
+font-size: ${props => props.theme.sizes.medium};
+cursor: pointer;
+:hover {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.body};
+    transition: all 200ms ease-in-out;
+}
 `
 export const LinkWrapper = styled.div`
 display: flex;
@@ -89,7 +94,6 @@ padding: 0 1rem;
 display: flex;
 flex-flow: row;
 align-content: center;
-background-color: ${props => props.theme.colors.blackSt};
 border-bottom: 1px solid grey;
 }
 

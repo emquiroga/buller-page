@@ -7,7 +7,7 @@ height: auto;
 position: relative;
 `
 export const ContentWrapper = styled.div`
-width: 80%;
+width: 90%;
 height: 100%;
 margin: auto;
 padding: 1rem;
@@ -25,15 +25,19 @@ background-color: white;
 export const Content = styled.p`
 font-family: ${({ theme }) => theme.fonts.secondary};
 font-size: ${({ theme }) => theme.sizes.large};
+font-weight: bold;
 margin: auto;
 padding: 1.5rem 0;
 color: black;
 `
 export const SliderLink = styled.a`
 display: block;
-margin-top: auto;
+margin: 1.5rem auto;
 text-decoration: underline;
-color: ${({ theme }) => theme.colors.body};
+font-family: ${({ theme }) => theme.fonts.extra};
+font-weight: 600;
+font-size: ${({ theme }) => theme.sizes.medium};
+color: ${({ theme }) => theme.colors.links};
 `
 
 export const ButtonWrapper = styled.div`
@@ -53,10 +57,16 @@ width: 74.07px;
 height: 60px;
 margin: 0 1px 0 0;
 padding: 0;
-background-color: black;
+background-color: ${({ theme }) => theme.colors.black};
 border: none;
 color: white;
+font-family: ${({ theme }) => theme.fonts.secondary};
 font-size: ${({ theme }) => theme.sizes.large};
+cursor: pointer;
+:hover {
+    background-color: ${({ theme }) => theme.colors.body};
+    transition: all 200ms ease-in-out;
+}
 `
 export const SliderNav = styled.nav`
 display: none;
@@ -79,4 +89,9 @@ padding: 0.5rem 1.5rem;
 background-color: transparent;
 color: white;
 font-size: ${({ theme }) => theme.sizes.medium};
+cursor: pointer;
+:hover {
+    color: ${({ theme }) => theme.colors.body};
+    transition: all 200ms ease-in-out;
+}
 `

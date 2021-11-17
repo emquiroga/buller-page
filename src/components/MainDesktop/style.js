@@ -6,7 +6,6 @@ export const MainDesk = styled.main`
 }
 width: 100%;
 background-color: ${({ theme }) => theme.colors.body};
-overflow: hidden;
 display: flex;
 flex-flow: row wrap;
 `
