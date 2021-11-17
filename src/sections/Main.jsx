@@ -1,6 +1,4 @@
 import ImageContainer from "components/ImageContainer/ImageContainer";
-import { StyledImage } from "components/ImageContainer/style";
-import { images } from "content";
 import React from "react";
 
 const Main = () => {
@@ -20,9 +18,6 @@ const Main = () => {
         y temperamento propio de cada variedad para lograr el sabor único que
         hoy es nuestro sello diferencial.
       </p>
-      {images.map((image, index) => (
-        <StyledImage src={image} key={index} alt="Buller Factory" />
-      ))}
     </main>
   );
 };

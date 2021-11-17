@@ -9,10 +9,6 @@ display: flex;
 flex-flow: row;
 :hover {
     animation: scroll 30s linear infinite;
-    cursor: pointer;
-}
-@media (min-width: ${({ theme }) => theme.breakPoints.large}) {
-    display: none;
 }
 
 `
@@ -21,15 +17,6 @@ width: 300px;
 height: auto;
 margin-right: 1rem;
 border-radius: 5px;
-
-@media (min-width: ${({ theme }) => theme.breakPoints.large}) {
-    :nth-of-type(1){
-        grid-column: 1;
-        width: 100%;
-        height: 100%;
-    }
-}
-
 :hover {
     transform: scale(1.035);
     transition: all 350ms ease-in-out;
