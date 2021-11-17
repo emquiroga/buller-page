@@ -1,7 +1,9 @@
 import { MainText, MainTitle } from "components/MainMobile/style";
-import { images } from "content";
 import React from "react";
 import { Column, DeskImage, MainDesk } from "./style";
+import Fabrica from "assets/fabrica.jpg";
+import Canillas from "assets/canillas.png";
+import Pinta from "assets/pinta.png";
 
 const MainDesktop = ({ content }) => {
   const { title, p1, p2 } = content;
@@ -11,11 +13,11 @@ const MainDesktop = ({ content }) => {
         <MainTitle>{title}</MainTitle>
         <MainText>{p1}</MainText>
         <MainText>{p2}</MainText>
-        <DeskImage src={images[0]} alt="" />
+        <DeskImage src={Fabrica} alt="" />
       </Column>
       <Column>
-        <DeskImage src={images[1]} alt="" />
-        <DeskImage src={images[2]} alt="" />
+        <DeskImage src={Canillas} alt="" />
+        <DeskImage src={Pinta} alt="" />
       </Column>
     </MainDesk>
   );

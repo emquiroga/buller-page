@@ -5,23 +5,27 @@ html {
   box-sizing: initial;
 }
 *,
-::-webkit-scrollbar, :-moz-appearance {
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+::-webkit-scrollbar{
   width: 12px;
   height: 12px;
 }
 
-::-webkit-scrollbar-track, :-moz-appearance {
+::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   cursor: pointer;
 }
 
-::-webkit-scrollbar-thumb, :-moz-appearance {
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.footer};
-  -webkit-box-shadow: inset 0 0 6px${({ theme }) => theme.colors.body};
-  box-shadow: inset 0 0 6px ${({ theme }) => theme.colors.body};
+  -webkit-box-shadow: inset 0 0 6px${({ theme }) => theme.colors.black};
+  box-shadow: inset 0 0 6px ${({ theme }) => theme.colors.black};
 }
 body {
     margin: 0;

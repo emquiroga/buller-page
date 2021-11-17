@@ -8,13 +8,18 @@ position: relative;
 background-color: transparent;
 `
 export const ContentWrapper = styled.div`
-width: 90%;
-height: 100%;
-margin: auto;
+width: 100%;
+height: auto;
 padding: 1rem;
+display: flex;
+flex-flow: column wrap;
+flex-basis: auto;
+flex-grow: reverse;
+text-align: left;
 font-weight: bold;
 background-color: white;
 overflow: hidden;
+transform-origin: bottom left;
 @media (min-width: ${({ theme }) => theme.breakPoints.large}) {
     max-width: 650px;
     height: auto;
@@ -22,10 +27,12 @@ overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-75%, -120%);
-    transform-origin: bottom left;
 }
 @media (min-width: ${({ theme }) => theme.breakPoints.xlarge}) {
-    transform: translate(-105%, -120%);
+    transform: translate(-105%, -125%);
+}
+@media (min-width: ${({ theme }) => theme.breakPoints.xXL}) {
+    transform: translate(-102%, -120%);
 }
 `
 export const Content = styled.p`
@@ -41,7 +48,7 @@ color: black;
 `
 export const SliderLink = styled.a`
 display: block;
-margin: 1.5rem auto;
+margin: 1.5rem 0;
 text-decoration: underline;
 font-family: ${({ theme }) => theme.fonts.extra};
 font-weight: 600;
@@ -94,12 +101,11 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -100%);  
-overflow: hidden;
 }
 `
 export const NavButton = styled.button`
-height: 100%;
-margin: 0;
+height: 80%;
+margin: auto;
 padding: 0;
 border: none;
 padding: 0.5rem 1.5rem;
@@ -110,7 +116,7 @@ font-family: ${({ theme }) => theme.fonts.extra};
 cursor: pointer;
 :hover {
     color: white;
-    border-bottom: 3px solid ${({ theme }) => theme.colors.hover};
+    border-bottom: 3px inset ${({ theme }) => theme.colors.hover};
     transition: all 200ms ease-in-out;
 }
 `
