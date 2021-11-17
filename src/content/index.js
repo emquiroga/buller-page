@@ -1,6 +1,6 @@
 export const sliderContent = [
+    ["Bienvenido"],
     ["Pioneros y uno de los fundadores en la elaboración artesanal de cerveza en Argentina"],
-    ["Sobre Nosotros"],
     ["Franquicias"],
     ["Experiencia Buller"],
 ]

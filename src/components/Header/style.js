@@ -78,7 +78,6 @@ font-size: ${props => props.theme.sizes.medium};
 font-family: ${props => props.theme.fonts.extra};
 cursor: pointer;
 :hover {
-    border-bottom: 3px inset ${({ theme }) => theme.colors.hover};
     color: ${props => props.theme.colors.grayish};
     transition: all 200ms ease-in-out;
 }
