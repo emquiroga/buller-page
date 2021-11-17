@@ -14,6 +14,7 @@ margin: auto;
 padding: 1rem;
 font-weight: bold;
 background-color: white;
+overflow: hidden;
 @media (min-width: ${({ theme }) => theme.breakPoints.large}) {
     max-width: 650px;
     height: auto;
@@ -46,6 +47,7 @@ font-family: ${({ theme }) => theme.fonts.extra};
 font-weight: 600;
 font-size: ${({ theme }) => theme.sizes.medium};
 color: ${({ theme }) => theme.colors.links};
+cursor: pointer;
 `
 
 export const ButtonWrapper = styled.div`
@@ -96,7 +98,7 @@ overflow: hidden;
 }
 `
 export const NavButton = styled.button`
-height: 60px;
+height: 100%;
 margin: 0;
 padding: 0;
 border: none;

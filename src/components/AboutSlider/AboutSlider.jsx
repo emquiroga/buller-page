@@ -25,7 +25,11 @@ const AboutSlider = () => {
             return (
               <div
                 key={index}
-                className={index === activeSlide ? "slide-active" : "slide"}
+                className={
+                  index === activeSlide
+                    ? "animate__animated animate__fadeInUp"
+                    : ""
+                }
               >
                 {index === activeSlide && <Content>{slide}</Content>}
               </div>

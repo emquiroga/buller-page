@@ -44,28 +44,9 @@ flex-flow: row;
 overflow-x: scroll;
 scroll-behavior: smooth;
 cursor: pointer;
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.footer};
-  -webkit-box-shadow: inset 0 0 6px${({ theme }) => theme.colors.body};
-  box-shadow: inset 0 0 6px ${({ theme }) => theme.colors.body};
-}
 `
 export const MobileImage = styled.img`
-width: 100%;
+width: auto;
 max-width: 400px;
 height: auto;
 margin-right: 12px;

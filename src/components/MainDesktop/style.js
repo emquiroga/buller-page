@@ -17,6 +17,7 @@ flex-direction: column;
 flex-basis: 100%;
 flex:1;
 justify-content: space-around;
+align-items: center;
 `
 export const DeskImage = styled.img`
 width: 100%;

@@ -36,7 +36,7 @@ width: 100%;
 padding: 2rem 0 1rem 0;
 display: flex;
 flex-flow: row;
-border-bottom: 1px solid grey;
+border-bottom: 1px solid ${props => props.theme.colors.grayish};
 `
 export const MediaWrapper = styled.div`
 margin-left: auto;
@@ -47,7 +47,7 @@ align-content: space-around;
 @media (min-width: ${props => props.theme.breakPoints.large}) {
     height: 100%;
     flex: 1;
-    border-left: 1px solid grey;
+    border-left: 1px solid ${props => props.theme.colors.grayish};
 }
 `
 export const MediaLink = styled.a`
@@ -68,7 +68,7 @@ display: flex;
 flex-flow: row;
 justify-content: space-around;
 align-content: space-around;
-border-bottom: 1px solid grey;
+border-bottom: 1px solid ${props => props.theme.colors.grayish};
 `
 export const NavLink = styled.a`
 display: block;
@@ -78,7 +78,7 @@ font-size: ${props => props.theme.sizes.medium};
 font-family: ${props => props.theme.fonts.extra};
 cursor: pointer;
 :hover {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.body};
+    color: ${props => props.theme.colors.grayish};
     transition: all 200ms ease-in-out;
 }
 `
@@ -101,5 +101,6 @@ flex-flow: row;
 align-content: center;
 border-bottom: 1px solid grey;
 }
+
 
 `
