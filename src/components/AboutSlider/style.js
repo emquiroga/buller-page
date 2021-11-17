@@ -8,7 +8,7 @@ position: relative;
 background-color: transparent;
 `
 export const ContentWrapper = styled.div`
-width: 100%;
+width: auto;
 height: auto;
 padding: 1rem;
 display: flex;
