@@ -5,6 +5,7 @@ background-color: transparent;
 width: 100%;
 height: auto;
 position: relative;
+background-color: transparent;
 `
 export const ContentWrapper = styled.div`
 width: 90%;
@@ -14,12 +15,16 @@ padding: 1rem;
 font-weight: bold;
 background-color: white;
 @media (min-width: ${({ theme }) => theme.breakPoints.large}) {
-    max-width: 680px;
+    max-width: 650px;
     height: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(10%, -100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -120%);
+    transform-origin: bottom left;
+}
+@media (min-width: ${({ theme }) => theme.breakPoints.xlarge}) {
+    transform: translate(-105%, -120%);
 }
 `
 export const Content = styled.p`
@@ -29,6 +34,9 @@ font-weight: bold;
 margin: auto;
 padding: 1.5rem 0;
 color: black;
+@media (min-width: ${({ theme }) => theme.breakPoints.large}) {
+    font-size: ${({ theme }) => theme.sizes.xlarge};
+}
 `
 export const SliderLink = styled.a`
 display: block;
@@ -72,26 +80,35 @@ export const SliderNav = styled.nav`
 display: none;
 @media (min-width: ${({ theme }) => theme.breakPoints.large}) {
 width: 100%;
+max-width: ${({ theme }) => theme.breakPoints.xlarge};
+height: 81px;
 margin: 0;
-padding: 1rem 0;
+padding: 0;
 display: flex;
 flex-flow: row;
-background-color: black;
-color: white;
-justify-content: space-around;    
+background-color: ${({ theme }) => theme.colors.black};
+justify-content: space-around;  
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -100%);  
+overflow: hidden;
 }
 `
 export const NavButton = styled.button`
+height: 60px;
 margin: 0;
 padding: 0;
 border: none;
 padding: 0.5rem 1.5rem;
-background-color: transparent;
-color: white;
+background-color: ${({ theme }) => theme.colors.black};
+color: ${({ theme }) => theme.colors.grayish};
 font-size: ${({ theme }) => theme.sizes.medium};
+font-family: ${({ theme }) => theme.fonts.extra};
 cursor: pointer;
 :hover {
-    color: ${({ theme }) => theme.colors.body};
+    color: white;
+    border-bottom: 3px solid ${({ theme }) => theme.colors.hover};
     transition: all 200ms ease-in-out;
 }
 `

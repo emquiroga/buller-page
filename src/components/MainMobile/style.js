@@ -14,6 +14,9 @@ font-family: ${({ theme }) => theme.fonts.secondary};
 font-weight: 600;
 padding: 2rem 1rem;
 color: white;
+@media (min-width: ${({ theme }) => theme.breakPoints.large}) {
+    font-size: 30px;
+}
 `
 export const MainText = styled.p`
 width: 93%;
@@ -24,6 +27,10 @@ text-align: left;
 font-weight: 400;
 font-size: 16px;
 font-family: ${({ theme }) => theme.fonts.extra};
+@media (min-width: ${({ theme }) => theme.breakPoints.large}) {
+    width: 100%;
+    font-size: 20px;
+}
 `
 
 export const ImgContainer = styled.div`
@@ -37,6 +44,25 @@ flex-flow: row;
 overflow-x: scroll;
 scroll-behavior: smooth;
 cursor: pointer;
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.colors.footer};
+  -webkit-box-shadow: inset 0 0 6px${({ theme }) => theme.colors.body};
+  box-shadow: inset 0 0 6px ${({ theme }) => theme.colors.body};
+}
 `
 export const MobileImage = styled.img`
 width: 100%;

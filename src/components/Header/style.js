@@ -12,8 +12,11 @@ flex-flow: column;
 background: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%), url(${HeaderMobile});
 background-size: cover;
 @media (min-width: ${props => props.theme.breakPoints.large}) {
+    height: 683px;
     flex-flow: row;
-    background-image: url(${HeaderDesk});
+    background:  linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 50%), url(${HeaderDesk});
+    background-size: cover;
+    background-position: right;
 }
 `
 export const Logo = styled.svg`
@@ -22,6 +25,7 @@ margin-left: 12px;
     margin: auto 0;
     padding: 0;
     flex: 1;
+    transform: scale(1.2)
 }
 `
 export const Media = styled.div`
@@ -71,6 +75,7 @@ display: block;
 color: white;
 margin: auto 2rem;
 font-size: ${props => props.theme.sizes.medium};
+font-family: ${props => props.theme.fonts.extra};
 cursor: pointer;
 :hover {
     border-bottom: 1px solid ${({ theme }) => theme.colors.body};

@@ -23,5 +23,6 @@ font-size: ${props => props.theme.sizes.small};
 @media (min-width: ${props => props.theme.breakPoints.large}) {
     margin: 2px;
     padding: 1rem 0;
+    font-size: 16px;
 }
 `

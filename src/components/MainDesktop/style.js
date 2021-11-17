@@ -20,11 +20,10 @@ justify-content: space-around;
 `
 export const DeskImage = styled.img`
 width: 100%;
-max-width: 600px;
-margin: 1rem auto;
-border-radius: .75rem;
-:hover {
-    transform: scale(1.035);
-    transition: all 350ms ease-in-out;
+max-width: 680px;
+margin: 1rem;
+padding:  0;
+@media (min-width: ${({ theme }) => theme.breakPoints.xlarge}) {
+    max-width: 750px;
 }
 `
